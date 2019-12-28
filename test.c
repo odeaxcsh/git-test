@@ -22,27 +22,6 @@ int main() {
 		
 		if (key && (bfr == ',' || bfr == ';'))
 			inp[len++] = '$';
-			
-		inp [len++] = bfr;
-		
-		if (bfr == ',' || bfr == ';')
-			key = 1;
-			
-		else key = 0;
-		
-	}
-	if (key) {
-		inp [len++] = '$';
-
-	inp [len] = 0;
-
-	char* tok = strtok (inp, ",;");
-	
-	int i = 0,
-		j = 0;
-	
-	while (tok != NULL) {
-		if (isNumber (tok))
 			nums[i++] = tok;
 		
 		else tokens[j++] = tok;
